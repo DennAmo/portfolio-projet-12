@@ -6,15 +6,12 @@ import './styles/App.scss';
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
 
-const scope = "https://www.googleapis.com/auth/drive";
-
-
 function App() {
 useEffect(() => {
   function start() {
     gapi.client.init({
       client_id: process.env.REACT_APP_CLIENT_ID,
-      scope: scope
+      scope: process.env.REACT_APP_SCOPE
     })
   }
   gapi.load('client:auth2', start)
