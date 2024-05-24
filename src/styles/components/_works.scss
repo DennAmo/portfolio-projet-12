@@ -1,0 +1,14 @@
+.works {
+   display: flex;
+   justify-content: space-between;
+    background-color: rgb(63, 62, 62);
+    border-radius: 25px;
+    padding: 35px;
+    margin: 35px;
+    flex-wrap: wrap;
+
+    &__cards {
+        width: 20%;
+    }
+}
+
