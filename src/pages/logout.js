@@ -18,7 +18,7 @@ const Logout = () => {
       <Header />
         <GoogleLogout
         clientId={process.env.REACT_APP_CLIENT_ID}
-        buttonText={"logout"}
+        buttonText={""}
           onLogoutSuccess={onSuccess}
           />
         <Footer />

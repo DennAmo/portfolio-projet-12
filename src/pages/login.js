@@ -19,7 +19,7 @@ const Login = () => {
     <div className='login'>
       <Header />
       <GoogleLogin
-        buttonText={"login"}
+        buttonText={""}
         client_id={process.env.REACT_APP_CLIENT_ID}
         onSuccess={onSuccess}
         onFailure={onFailure}

@@ -1,3 +1,5 @@
+import React from "react";
+
 const Works = ({ projects }) => {
   return (
     <div className="works">

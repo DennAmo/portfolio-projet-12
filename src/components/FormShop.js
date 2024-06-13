@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
-const Form = ({ addProject }) => {
-  const [title, setTitle] = useState('');
+
+const FormShop = () => {
   const [imageFile, setImageFile] = useState(null);
-  const [description, setDescription] = useState('');
-  const [git, setGit] = useState('');
+  const [title, setTitle] = useState('');
   const [isFormVisible, setIsFormVisible] = useState(false);
+  const [products, setProducts] = useState([]);
+
 
   const handleImageChange = (e) => {
     setImageFile(e.target.files[0]);
@@ -13,36 +15,28 @@ const Form = ({ addProject }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (imageFile) {
+
+    if (imageFile && title) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        const newProject = {
-          title,
-          image: reader.result,
-          description,
-          git,
+        const newProduct = {
+          src: reader.result,
+          title: title,
+          price: "16.89€", // Prix par défaut, peut être changé
         };
-        addProject(newProject);
-        setTitle('');
-        setImageFile(null);
-        setDescription('');
-        setGit('');
-        setIsFormVisible(false);
+
+        axios.post('http://localhost:5000/add-product', newProduct)
+          .then(response => {
+            setProducts([...products, newProduct]);
+            setTitle('');
+            setImageFile(null);
+            setIsFormVisible(false);
+          })
+          .catch(error => {
+            console.error('Error adding product:', error);
+          });
       };
       reader.readAsDataURL(imageFile);
-    } else {
-      const newProject = {
-        title,
-        image: '',
-        description,
-        git,
-      };
-      addProject(newProject);
-      setTitle('');
-      setImageFile(null);
-      setDescription('');
-      setGit('');
-      setIsFormVisible(false);
     }
   };
 
@@ -52,7 +46,7 @@ const Form = ({ addProject }) => {
     return (
       <div className='form'>
         <button className="open-form-button" onClick={() => setIsFormVisible(true)}>
-          Add New Project
+          Add New Product
         </button>
         {isFormVisible && (
           <div className="form-container" onClick={() => setIsFormVisible(false)}>
@@ -78,30 +72,12 @@ const Form = ({ addProject }) => {
                     required
                   />
                 </div>
-                <div>
-                  <label className="form__description" htmlFor="description">Description</label>
-                  <textarea
-                    id="description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    required
-                  ></textarea>
-                </div>
-                <div>
-                  <label className='form__gitlink' htmlFor="git">GitHub URL</label>
-                  <input
-                    type="text"
-                    id="git"
-                    value={git}
-                    onChange={(e) => setGit(e.target.value)}
-                    required
-                  />
-                </div>
                 <button className='form__submit' type="submit">Add Project</button>
               </form>
             </div>
           </div>
         )}
+
       </div>
     );
   } else {
@@ -109,4 +85,4 @@ const Form = ({ addProject }) => {
   }
 };
 
-export default Form;
+export default FormShop;

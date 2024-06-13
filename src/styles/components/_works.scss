@@ -7,8 +7,22 @@
     margin: 35px;
     flex-wrap: wrap;
 
+    @media screen and (max-width: 760px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+        
+      }
     &__cards {
-        width: 20%;
+        margin-bottom: 90px;
+        display: flex;
+        flex-direction: column;
+align-items: center;
+        width: 25%;
+        img {
+            width: 100%;
+            object-fit: fill;
+        }
     }
 }
 

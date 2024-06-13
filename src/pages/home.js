@@ -9,15 +9,15 @@ import axios from 'axios';
 
 const Home = () => {
  
-  const [projects, setProjects] = useState([projectsData]);
+  const [projects, setProjects] =  useState([projectsData]);
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get('http://localhost:5000/projects');
         setProjects(response.data);
-      } catch (error) {
-        console.error('Error fetching projects:', error);
+      } catch (err) {
+        console.error('Error fetching projects:', err);
       }
     };
     fetchProjects();
@@ -37,6 +37,7 @@ const Home = () => {
       <Header />
       <Form addProject={addProject} />
       <Works projects={projects} />
+   
       <Footer />
     </div>
   );

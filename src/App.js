@@ -5,6 +5,7 @@ import Logout from './pages/logout'
 import './styles/App.scss';
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
+import Shop from "./pages/shop.js";
 
 function App() {
 useEffect(() => {
@@ -24,6 +25,7 @@ useEffect(() => {
         <Route path="/accueil" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
     </HashRouter>
   );
