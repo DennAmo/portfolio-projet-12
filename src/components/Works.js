@@ -8,7 +8,9 @@ const Works = ({ projects }) => {
           <h2>{project.title}</h2>
           <img src={project.image} alt={project.title} />
           <p>{project.description}</p>
-          <a href={project.git} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a href={project.git} target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
         </div>
       ))}
     </div>

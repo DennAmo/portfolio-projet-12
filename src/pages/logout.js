@@ -1,29 +1,24 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import React from 'react';
-import { GoogleLogout } from 'react-google-login';
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import React from "react";
+import { GoogleLogout } from "react-google-login";
 
 const Logout = () => {
-
   const onSuccess = () => {
-    console.log("ok")
-    sessionStorage.removeItem('isLoggedIn', 'false')
+    console.log("ok");
+    sessionStorage.removeItem("isLoggedIn", "false");
   };
 
-
-
   return (
-
-      <div className='logout'>
+    <div className="logout">
       <Header />
-        <GoogleLogout
+      <GoogleLogout
         clientId={process.env.REACT_APP_CLIENT_ID}
         buttonText={""}
-          onLogoutSuccess={onSuccess}
-          />
-        <Footer />
-      </div>
-
+        onLogoutSuccess={onSuccess}
+      />
+      <Footer />
+    </div>
   );
 };
 

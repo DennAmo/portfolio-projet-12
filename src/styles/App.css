@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -6,15 +5,6 @@ body {
   color: #ddd;
   background-color: #222;
   overflow-x: hidden;
-}
-
-header, footer {
-  background-color: #111;
-  padding: 1rem 2rem;
-}
-
-header h1, footer p {
-  margin: 0;
 }
 
 h1 {
@@ -40,9 +30,22 @@ main {
   color: white;
 }
 
+.login,
+.logout {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 7%;
+  min-width: 100px;
+  align-self: center;
+}
+
 header {
   background-color: #111;
   padding: 1rem 2rem;
+  margin-bottom: 20px;
 }
 
 header h1 {
@@ -87,11 +90,10 @@ footer p {
      object-fit: fill;
 }
 
-/* Styles pour le formulaire */
 .form {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .form .form__title,
 .form .form__image,
@@ -102,7 +104,8 @@ footer p {
   font-weight: bold;
   color: black;
 }
-.form input, .form textarea {
+.form input,
+.form textarea {
   color: black;
   display: block;
   margin-bottom: 10px;
@@ -151,17 +154,6 @@ footer p {
 }
 .form .open-form-button:hover {
   background: #218838;
-}
-
-.login,
-.logout {
-  display: flex;
-  flex-direction: column;
-}
-
-button {
-  width: 10%;
-  min-width: 100px;
 }
 
 nav ul {
@@ -247,7 +239,6 @@ nav a:hover span:after {
   height: 100%;
 }
 
-/* Style de la grille de produits */
 .product-grid {
   margin-top: 30px;
   display: grid;
@@ -258,7 +249,6 @@ nav a:hover span:after {
   padding-bottom: 20px;
 }
 
-/* Style des éléments de produits */
 .product-item {
   background-color: rgb(63, 62, 62);
   border-radius: 10px;
@@ -267,13 +257,11 @@ nav a:hover span:after {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Animation au survol des éléments de produits */
 .product-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Style des images de produits */
 .product-item img {
   width: 100%;
   height: 200px;
@@ -282,7 +270,6 @@ nav a:hover span:after {
   display: block;
 }
 
-/* Style des liens et des descriptions de produits */
 .product-item a {
   margin-top: 20px;
   position: relative;
@@ -292,7 +279,6 @@ nav a:hover span:after {
   padding: 10px;
 }
 
-/* Style du titre */
 h1 {
   margin-top: 10px;
   font-size: 16px;
@@ -320,4 +306,37 @@ h1 {
   .product-grid {
     grid-template-columns: 1fr;
   }
+}
+#chat-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #969494;
+  border-radius: 10px;
+}
+#chat-container span {
+  color: rgb(155, 42, 221);
+}
+
+#chat-box {
+  height: 170px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  border: 1px solid #aaaaaa;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#user-input {
+  width: 70%;
+  padding: 10px;
+  background-color: #969494;
+}
+
+button {
+  width: 15%;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #5a5858;
 }/*# sourceMappingURL=App.css.map */

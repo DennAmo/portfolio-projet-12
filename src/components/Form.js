@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Form = ({ addProject }) => {
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState("");
   const [imageFile, setImageFile] = useState(null);
-  const [description, setDescription] = useState('');
-  const [git, setGit] = useState('');
+  const [description, setDescription] = useState("");
+  const [git, setGit] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const handleImageChange = (e) => {
@@ -23,43 +23,51 @@ const Form = ({ addProject }) => {
           git,
         };
         addProject(newProject);
-        setTitle('');
+        setTitle("");
         setImageFile(null);
-        setDescription('');
-        setGit('');
+        setDescription("");
+        setGit("");
         setIsFormVisible(false);
       };
       reader.readAsDataURL(imageFile);
     } else {
       const newProject = {
         title,
-        image: '',
+        image: "",
         description,
         git,
       };
       addProject(newProject);
-      setTitle('');
+      setTitle("");
       setImageFile(null);
-      setDescription('');
-      setGit('');
+      setDescription("");
+      setGit("");
       setIsFormVisible(false);
     }
   };
 
-  const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+  const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
 
   if (isLoggedIn) {
     return (
-      <div className='form'>
-        <button className="open-form-button" onClick={() => setIsFormVisible(true)}>
+      <div className="form">
+        <button
+          className="open-form-button"
+          onClick={() => setIsFormVisible(true)}
+        >
           Add New Project
         </button>
         {isFormVisible && (
-          <div className="form-container" onClick={() => setIsFormVisible(false)}>
+          <div
+            className="form-container"
+            onClick={() => setIsFormVisible(false)}
+          >
             <div className="form-content" onClick={(e) => e.stopPropagation()}>
-              <form onSubmit={handleSubmit}> 
-                <div className='form__layout'>
-                  <label className='form__title' htmlFor="title">Title</label>
+              <form onSubmit={handleSubmit}>
+                <div className="form__layout">
+                  <label className="form__title" htmlFor="title">
+                    Title
+                  </label>
                   <input
                     type="text"
                     id="title"
@@ -69,7 +77,9 @@ const Form = ({ addProject }) => {
                   />
                 </div>
                 <div>
-                  <label className='form__image' htmlFor="image">Image</label>
+                  <label className="form__image" htmlFor="image">
+                    Image
+                  </label>
                   <input
                     type="file"
                     id="image"
@@ -79,7 +89,9 @@ const Form = ({ addProject }) => {
                   />
                 </div>
                 <div>
-                  <label className="form__description" htmlFor="description">Description</label>
+                  <label className="form__description" htmlFor="description">
+                    Description
+                  </label>
                   <textarea
                     id="description"
                     value={description}
@@ -88,7 +100,9 @@ const Form = ({ addProject }) => {
                   ></textarea>
                 </div>
                 <div>
-                  <label className='form__gitlink' htmlFor="git">GitHub URL</label>
+                  <label className="form__gitlink" htmlFor="git">
+                    GitHub URL
+                  </label>
                   <input
                     type="text"
                     id="git"
@@ -97,7 +111,9 @@ const Form = ({ addProject }) => {
                     required
                   />
                 </div>
-                <button className='form__submit' type="submit">Add Project</button>
+                <button className="form__submit" type="submit">
+                  Add Project
+                </button>
               </form>
             </div>
           </div>

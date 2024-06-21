@@ -1,33 +1,24 @@
-
 import FormShop from "./FormShop";
-import React from 'react';
-import products from "../data/products.json"
+import React from "react";
+import products from "../data/products.json";
 
 const ShopDisplay = () => {
-
-
   return (
     <>
-
-    <FormShop />
-      <div class="product-grid">
-  
-      {products.map((product, index) => (
-            <div className="product-item" key={index}>
-              <a href="https://www.redbubble.com/fr/people/myu74/shop?asc=u">
-                <img
-                  src={product.src}
-                  alt={product.title}
-                />
-                <h1>{product.title}</h1>
-                <div className="price">
-                  <span>{product.price}</span>
-                
-                </div>
-              </a>
-            </div>
-          ))}
-        <div class="product-item">
+      <FormShop />
+      <div className="product-grid">
+        {products.map((product, index) => (
+          <div className="product-item" key={index}>
+            <a href="https://www.redbubble.com/fr/people/myu74/shop?asc=u">
+              <img src={product.src} alt={product.title} />
+              <h1>{product.title}</h1>
+              <div className="price">
+                <span>{product.price}</span>
+              </div>
+            </a>
+          </div>
+        ))}
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Neko-catgirl-dessin-avec-panier-de-fleur-par-myu74/152824343.E40HW">
             <img
               src="./assets/1.jpg"
@@ -40,7 +31,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Neko-school-catgirl-dessin-par-myu74/152906166.E40HW">
             <img
               src="./assets/2.jpg"
@@ -53,7 +44,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Neko-catgirl-dessin-par-myu74/152961684.E40HW">
             <img
               src="./assets/3.jpg"
@@ -66,7 +57,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fran-reincarn%C3%A9e-en-%C3%A9p%C3%A9e-tensei-shitara-ken-deshita-par-myu74/152960627.E40HW">
             <img
               src="./assets/4.jpg"
@@ -79,7 +70,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Neko-catgirl-dessin-par-myu74/152961530.E40HW">
             <img
               src="./assets/5.jpg"
@@ -92,7 +83,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-aventuri%C3%A8re-Neko-catgirl-dessin-par-myu74/152905719.E40HW">
             <img
               src="./assets/6.jpg"
@@ -105,7 +96,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-fantastique-sorci%C3%A8re-magique-r%C3%A9aliste-armure-light-par-myu74/152588293.E40HW">
             <img
               src="./assets/7.jpg"
@@ -121,7 +112,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Foret-sombre-enchant%C3%A9e-magique-dark-magic-par-myu74/152731506.E40HW">
             <img
               src="./assets/8.jpg"
@@ -134,7 +125,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Futuriste-Neko-Chat-avec-aura-sombre-par-myu74/152487835.E40HW">
             <img
               src="./assets/9.jpg"
@@ -147,7 +138,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Chasseuse-de-D%C3%A9mon-fantasy-draw-style-par-myu74/152800755.E40HW">
             <img
               src="./assets/10.jpg"
@@ -160,7 +151,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fran-reincarn%C3%A9e-en-%C3%A9p%C3%A9e-tensei-shitara-ken-deshita-par-myu74/152951518.E40HW">
             <img
               src="./assets/11.jpg"
@@ -173,7 +164,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-fantastique-sorci%C3%A8re-avec-effet-magie-anime-par-myu74/152800705.E40HW">
             <img
               src="./assets/12.jpg"
@@ -188,7 +179,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Invocation-Magique-Ancient-dans-une-Foret-par-myu74/152490822.E40HW">
             <img
               src="./assets/13.jpg"
@@ -201,7 +192,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Amarea-Fantasy-fantastique-sorci%C3%A8re-magie-par-myu74/152549638.E40HW">
             <img
               src="./assets/14.jpg"
@@ -214,7 +205,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Amarea-Fantasy-fantastique-sorci%C3%A8re-magie-splash-dispers%C3%A9-par-myu74/152639533.E40HW">
             <img
               src="./assets/15.jpg"
@@ -229,7 +220,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Neko-catgirl-dessin-par-myu74/152906072.E40HW">
             <img
               src="./assets/16.jpg"
@@ -242,7 +233,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/post-apocalypse-explosion-magique-par-myu74/152731662.E40HW">
             <img
               src="./assets/17.jpg"
@@ -255,7 +246,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-D%C3%A9mon-foret-magie-par-myu74/152734399.E40HW">
             <img
               src="./assets/18.jpg"
@@ -268,7 +259,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Neko-catgirl-avec-bouquet-fleur-dessin-par-myu74/152823827.E40HW">
             <img
               src="./assets/19.jpg"
@@ -281,7 +272,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Neko-catgirl-dessin-maillot-de-bain-par-myu74/152952659.E40HW">
             <img
               src="./assets/20.jpg"
@@ -294,7 +285,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Adult-Fran-Reincarnated-as-a-Sword-fanart-par-myu74/152734896.E40HW">
             <img
               src="./assets/21.jpg"
@@ -307,7 +298,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fran-Adult-Reincarnated-as-a-Sword-fanart-par-myu74/152734819.E40HW">
             <img
               src="./assets/22.jpg"
@@ -320,7 +311,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/sticker/D%C3%A9coration-theme-Japon-style-vague-et-fleur-et-vent-par-myu74/152533170.EJUG5">
             <img
               src="./assets/23.jpg"
@@ -333,7 +324,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-D%C3%A9mon-puissant-par-myu74/152734088.E40HW">
             <img
               src="./assets/24.jpg"
@@ -346,7 +337,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Neko-magique-catgirl-cheveux-bleu-dessin-par-myu74/152906128.E40HW">
             <img
               src="./assets/25.jpg"
@@ -359,7 +350,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Espace-%C3%A9toile-plan%C3%A8te-dessin-par-myu74/152735209.E40HW">
             <img
               src="./assets/26.jpg"
@@ -372,7 +363,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-fantastique-sorci%C3%A8re-avec-effet-magie-cartoon-anim%C3%A9-style-par-myu74/152699524.E40HW">
             <img
               src="./assets/27.jpg"
@@ -388,7 +379,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Amarea-Fantasy-fantastique-sorci%C3%A8re-effet-magique-par-myu74/152529252.E40HW">
             <img
               src="./assets/28.jpg"
@@ -401,7 +392,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fran-reincarn%C3%A9e-en-%C3%A9p%C3%A9e-tensei-shitara-ken-deshita-par-myu74/152951701.E40HW">
             <img
               src="./assets/29.jpg"
@@ -414,7 +405,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Roi-D%C3%A9mon-puissant-pouvoir-magique-par-myu74/152699981.E40HW">
             <img
               src="./assets/30.jpg"
@@ -427,7 +418,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Invocation-Magique-gravure-runique-ancienne-par-myu74/152488637.E40HW">
             <img
               src="./assets/31.jpg"
@@ -440,7 +431,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Gamer-Fantasy-logo-aura-sombre-gravure-runique-nordique-par-myu74/152488243.E40HW">
             <img
               src="./assets/32.jpg"
@@ -455,7 +446,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Cercle-Invocation-Magique-Ancient-Runique-en-Foret-par-myu74/152518064.E40HW">
             <img
               src="./assets/33.jpg"
@@ -468,7 +459,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Shaman-magie-obscur-runique-par-myu74/152734237.E40HW">
             <img
               src="./assets/34.jpg"
@@ -481,7 +472,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-fantastique-sorci%C3%A8re-pouvoir-%C3%A9nerg%C3%A9tiques-magique-effet-manga-dessin-par-myu74/152579860.E40HW">
             <img
               src="./assets/35.jpg"
@@ -497,7 +488,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Runic-Fantasy-Logo-avec-Gravure-Ancienne-par-myu74/152487368.E40HW">
             <img
               src="./assets/36.jpg"
@@ -510,7 +501,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Fantasy-Neko-catgirl-dessin-tenir-par-la-main-par-myu74/152824422.E40HW">
             <img
               src="./assets/37.jpg"
@@ -523,7 +514,7 @@ const ShopDisplay = () => {
           </a>
         </div>
 
-        <div class="product-item">
+        <div className="product-item">
           <a href="https://www.redbubble.com/fr/i/poster/Espace-%C3%A9toile-plan%C3%A8te-dessin-effet-splash-dispers%C3%A9-par-myu74/152735040.E40HW">
             <img
               src="./assets/38.jpg"
@@ -533,16 +524,13 @@ const ShopDisplay = () => {
               Espace - étoile - planète dessin effet splash dispersé Poster
             </h1>
             <div className="price">
-              <span>16.89€</span>              
+              <span>16.89€</span>
             </div>
           </a>
         </div>
       </div>
     </>
-    
   );
-
-  
 };
 
 export default ShopDisplay;
