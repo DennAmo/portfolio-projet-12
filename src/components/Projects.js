@@ -1,5 +1,4 @@
 import React, { useState, useEffect }from "react";
-import AnimationExemple from "./AnimationExemple"
 import projects from "../data/projects.json"
 
 const Projects = () => {
@@ -12,7 +11,6 @@ const Projects = () => {
   return (
     <div className="works">
     <div className="works__animation">
-              <AnimationExemple />
             <div className="works__projects">
       {project.map((project, index) => (
         <div className="works__cards" key={index}>
