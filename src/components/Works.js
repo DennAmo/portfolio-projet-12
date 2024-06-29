@@ -1,8 +1,12 @@
 import React from "react";
+import AnimationExemple from "./AnimationExemple"
 
 const Works = ({ projects }) => {
   return (
     <div className="works">
+    <div className="works__animation">
+              <AnimationExemple />
+            <div className="works__projects">
       {projects.map((project, index) => (
         <div className="works__cards" key={index}>
           <h2>{project.title}</h2>
@@ -13,6 +17,8 @@ const Works = ({ projects }) => {
           </a>
         </div>
       ))}
+    </div>
+    </div>
     </div>
   );
 };

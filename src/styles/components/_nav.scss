@@ -80,3 +80,9 @@ nav a span:after {
 nav a:hover span:after {
   height: 100%;
 }
+
+@media screen and (max-width: 568px) {
+  ul {
+    flex-direction: column;
+  }
+}

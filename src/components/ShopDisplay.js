@@ -6,6 +6,9 @@ const ShopDisplay = () => {
   return (
     <>
       <FormShop />
+      <a href="https://www.redbubble.com/fr/people/myu74/shop">
+        <h3>Click to view on Redbubble</h3>
+      </a>
       <div className="product-grid">
         {products.map((product, index) => (
           <div className="product-item" key={index}>

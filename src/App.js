@@ -7,6 +7,9 @@ import { gapi } from "gapi-script";
 import { useEffect } from "react";
 import Shop from "./pages/shop.js";
 import Aboutme from "./pages/aboutme.js";
+import Services from "./pages/services.js";
+import Header from "./components/Header.js"
+import Footer from "./components/Footer.js"
 
 function App() {
   useEffect(() => {
@@ -21,6 +24,7 @@ function App() {
 
   return (
     <HashRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Navigate replace to="/accueil" />} />
         <Route path="/accueil" element={<Home />} />
@@ -28,7 +32,9 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/aboutme" element={<Aboutme />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
+      <Footer />
     </HashRouter>
   );
 }

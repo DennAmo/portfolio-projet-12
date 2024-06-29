@@ -1,11 +1,8 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Works from "../components/Works";
 import Form from "../components/Form";
 import projectsData from "../data/projects.json";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Chatbox from "../components/Chatbox";
 
 const Home = () => {
   const [projects, setProjects] = useState([projectsData]);
@@ -33,11 +30,8 @@ const Home = () => {
 
   return (
     <div className="main">
-      <Header />
       <Form addProject={addProject} />
-      <Chatbox />
       <Works projects={projects} />
-      <Footer />
     </div>
   );
 };
