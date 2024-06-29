@@ -6,9 +6,9 @@ const Nav = () => {
     <nav>
       <ul>
 
-        <NavLink to="/accueil" className="shop">
+        <NavLink to="/portfolio" className="shop">
           <li className="mod">
-            Accueil
+            Accueil/Projets
           </li>
         </NavLink>
 

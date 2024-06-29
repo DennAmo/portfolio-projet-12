@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/projects");
+        const response = await axios.get("/projects");
         setProjects(response.data);
       } catch (err) {
         console.error("Error fetching projects:", err);
@@ -21,7 +21,7 @@ const Home = () => {
 
   const addProject = async (project) => {
     try {
-      await axios.post("http://localhost:5000/add-project", project);
+      await axios.post("/add-project", project);
       setProjects((prevProjects) => [...prevProjects, project]);
     } catch (error) {
       console.error("Error adding project:", error);

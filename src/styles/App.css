@@ -532,4 +532,11 @@ nav a:hover span:after {
     transform: translateX(-2000px);
   }
 }
-/***********  ANIMATION FIN ***************//*# sourceMappingURL=App.css.map */
+/***********  ANIMATION FIN ***************/
+.aboutme a {
+  font-size: 24px;
+  color: yellow;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}/*# sourceMappingURL=App.css.map */

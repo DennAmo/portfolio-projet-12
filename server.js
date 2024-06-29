@@ -14,7 +14,7 @@ const productsFilePath = path.join(__dirname, "src", "data", "products.json");
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // Remplace par le domaine de ton client
+    origin: "https://dennamo.github.io/accueil", // Remplace par le domaine de ton client
     methods: "GET,POST",
     allowedHeaders: "Content-Type",
   })
