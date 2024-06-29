@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
 import "./styles/App.scss";
 import Shop from "./pages/shop.js";
@@ -13,7 +13,6 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate replace to="/portfolio" />} />
         <Route path="/portfolio" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/aboutme" element={<Aboutme />} />
