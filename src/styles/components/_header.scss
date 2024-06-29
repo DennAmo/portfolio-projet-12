@@ -1,9 +1,11 @@
 header {
   background-color: #111;
   padding: 1rem 2rem;
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   h4{
-    display: inline-flex;
     margin: 0;
     font-size: 38px;
   }
