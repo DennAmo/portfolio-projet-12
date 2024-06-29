@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState, useEffect }from "react";
 import AnimationExemple from "./AnimationExemple"
+import projects from "../data/projects.json"
 
-const Works = ({ projects }) => {
+const Projects = () => {
+
+      const [project, setProjects] = useState([]);
+      useEffect(() => {
+        setProjects(projects);
+      }, []);
+
   return (
     <div className="works">
     <div className="works__animation">
               <AnimationExemple />
             <div className="works__projects">
-      {projects.map((project, index) => (
+      {project.map((project, index) => (
         <div className="works__cards" key={index}>
           <h2>{project.title}</h2>
           <img src={project.image} alt={project.title} />
@@ -23,4 +30,4 @@ const Works = ({ projects }) => {
   );
 };
 
-export default Works;
+export default Projects;

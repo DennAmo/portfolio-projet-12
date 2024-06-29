@@ -247,8 +247,12 @@
 }
 
 @keyframes hill {
+0% {
+  transform: translateY(0px);
+}
+
   100% {
-    transform: translateX(-2000px);
+    transform: translateX(-2550px);
   }
 }
 
