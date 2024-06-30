@@ -6,7 +6,7 @@ const Nav = () => {
     <nav>
       <ul>
 
-        <NavLink to="/portfolio" className="shop">
+        <NavLink to="/portfolio" className="index">
           <li className="mod">
             Accueil/Projets
           </li>
@@ -18,7 +18,7 @@ const Nav = () => {
           </li>
         </NavLink>
 
-        <NavLink to="/aboutme" className="aboutme">
+        <NavLink to="/aboutme" className="aboutmeBTN">
           <li className="mod">
             A Propos/Contact
           </li>

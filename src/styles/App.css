@@ -42,13 +42,23 @@ button {
   align-self: center;
 }
 
+.active {
+  color: #222;
+  background-color: #fafafa;
+}
+.active li {
+  color: black;
+}
+
 header {
   background-color: #111;
   padding: 1rem 2rem;
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 header h4 {
-  display: inline-flex;
   margin: 0;
   font-size: 38px;
 }
@@ -181,8 +191,6 @@ footer p {
 nav ul {
   list-style-type: none;
   padding: 0;
-  display: flex;
-  justify-content: space-around;
 }
 
 nav a {
@@ -194,6 +202,7 @@ nav a {
   position: relative;
   transition: color 0.3s, background-color 0.3s;
   overflow: hidden;
+  margin-right: 10px;
 }
 
 nav a:hover {
@@ -263,6 +272,7 @@ nav a:hover span:after {
 
 @media screen and (max-width: 568px) {
   ul {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -332,10 +342,21 @@ nav a:hover span:after {
     grid-template-columns: 1fr;
   }
 }
+.aboutme {
+  margin: 60px;
+}
 .aboutme a {
   font-size: 24px;
   color: yellow;
   display: flex;
   flex-direction: column;
   margin-bottom: 5px;
+}
+.aboutme p {
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+.aboutme h2 a {
+  margin: 10px;
 }/*# sourceMappingURL=App.css.map */

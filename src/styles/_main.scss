@@ -41,3 +41,11 @@ button {
   min-width: 100px;
   align-self: center;
 }
+
+.active {
+  color: #222;
+  background-color: #fafafa;
+  li {
+    color: black;
+  }
+}

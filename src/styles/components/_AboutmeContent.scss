@@ -1,9 +1,20 @@
 .aboutme {
+    margin: 60px;
+    
     a {
         font-size: 24px;
         color: yellow;
         display: flex;
         flex-direction: column;
         margin-bottom: 5px;
+    }
+    p {
+        white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        font-family: Arial, sans-serif;
+margin: 10px;
+    }
+
+    h2 a{
+        margin: 10px;
     }
 }
