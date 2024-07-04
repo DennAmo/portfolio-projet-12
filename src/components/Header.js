@@ -6,7 +6,8 @@ const Header = () => {
   return (
     <header>
     <h3>Portfolio</h3>
-    <MatrixText text='Thing you = new Lovable("You", 0, false, -1, false);' />
+    <MatrixText text=" me.escape(world);
+       world.execute(me);" />
       <Nav />
     </header>
   );

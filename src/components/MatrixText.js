@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from 'react';
 
-
 const MatrixText = ({ text }) => {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState([]);
 
   useEffect(() => {
     const updateText = () => {
-      let newText = '';
-      for (let i = 0; i < text.length; i++) {
-        newText += Math.random() > 0.05 ? text[i] : getRandomChar();
-      }
+      const newText = text.split('').map((char, index) => ({
+        char: Math.random() > 0.02 ? char : getRandomChar(),
+        key: index,
+      }));
       setDisplayedText(newText);
     };
 
-    const interval = setInterval(updateText, 50);
+    const interval = setInterval(updateText, 100);
     return () => clearInterval(interval);
   }, [text]);
 
   return (
-    <span className="matrix-text">{displayedText}</span>
+    <pre className="matrix-text">
+      {displayedText.map(({ char, key }) => (
+        <span key={key} className="matrix-char">{char}</span>
+      ))}
+    </pre>
   );
 };
 
-const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&é"(-è_çà)=^$ù*,;:!<>?./§%µ£¨~#{[|`@]}+°&²';
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
 const getRandomChar = () => chars[Math.floor(Math.random() * chars.length)];
 
