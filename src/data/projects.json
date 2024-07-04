@@ -1,25 +1,25 @@
 [
   {
     "title": "Booki Openclassrooms",
-    "image": "/assets/booki.jpg",
+    "image": "/assets/booki.png",
     "description": "Projet Booki, HTML/CSS statique pour Openclassrooms",
     "git": "https://github.com/DennAmo/booki "
   },
   {
     "title": "Ohmyfood Openclassrooms",
-    "image": "/assets/food.jpg",
+    "image": "/assets/food.png",
     "description": "Projet Ohmyfood, HTML/SCSS avec quelques animations CSS pour Openclassrooms",
     "git": "https://github.com/DennAmo/Ohmyfood"
   },
   {
     "title": "Kasa Openclassrooms",
-    "image": "/assets/kasa.jpg",
+    "image": "/assets/kasa.png",
     "description": "Projet Kasa, HTML/SCSS et REACT/JavaScript dynamique pour Openclassrooms",
     "git": "https://github.com/DennAmo/kasa"
   },
   {
     "title": "Simple GGUF Model Calling trough Terminal",
-    "image": "/assets/preview.jpg",
+    "image": "/assets/preview.png",
     "description": "Call a GGUF A.I model trough huggingface_hub, llama_cpp package, os and datetime package for timestamp txt memory, also used fine-tuning, and structure json/txt/csv data format",
     "git": "https://github.com/DennAmo/LLMs-Python/tree/main/Simple%20Terminal%20LLMs.GGUF%20call%20with%20txt%20memory"
   }

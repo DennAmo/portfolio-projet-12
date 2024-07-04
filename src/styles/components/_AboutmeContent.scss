@@ -7,6 +7,8 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 5px;
+        width: 11%;
+        white-space: nowrap;
     }
     p {
         white-space: pre-wrap; /* Preserve whitespace and line breaks */

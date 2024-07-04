@@ -5,13 +5,18 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  h4{
+  h3{
     margin: 0;
     font-size: 38px;
   }
   span {
     margin: 0;
   }
+  .matrix-text {
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 }
 
 
