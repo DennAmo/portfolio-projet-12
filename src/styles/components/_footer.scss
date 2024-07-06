@@ -1,13 +1,21 @@
 footer {
   background-color: #111;
   padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
 
   nav {
     ul {
     width: 90%;
+    display: unset;
   }
   }
 }
-footer p {
-  margin: 0;
+
+.matrix-text, .matrix-char {
+  display: flex;
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+
+
 }
