@@ -17,7 +17,7 @@
     "title": "Kasa Openclassrooms",
     "image": "/assets/kasa.png",
     "description": "Projet Kasa, HTML/SCSS et REACT/JavaScript dynamique pour Openclassrooms",
-    "link":"https://dennamo.github.io/kasabuild",
+    "link":"https://kasapreview.netlify.app",
     "git": "https://github.com/DennAmo/kasa"
   },
   {
