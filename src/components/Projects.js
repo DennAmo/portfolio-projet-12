@@ -15,12 +15,12 @@ const Projects = () => {
             <div className="works__projects">
       {project.map((project, index) => (
         <div className="works__cards" key={index}>
-          <a href={project.link}>
+          <a target="_blank" rel="noreferrer" href={project.link}>
           <h2>{project.title}</h2>
           <img src={project.image} alt={project.title} />
           <p>{project.description}</p>
           </a>
-          <a href={project.git} target="_blank" rel="noopener noreferrer">
+          <a href={project.git} target="_blank" rel="noreferrer">
             View on GitHub
           </a>
         </div>
