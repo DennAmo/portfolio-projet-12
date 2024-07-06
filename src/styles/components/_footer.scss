@@ -6,13 +6,14 @@ footer {
 
   nav {
     ul {
-    width: 90%;
-    display: unset;
-  }
+      width: 90%;
+      display: unset;
+    }
   }
 }
 
-.matrix-text, .matrix-char {
+.matrix-text,
+.matrix-char {
   display: flex;
   color: green;
   font-family: 'Courier New', Courier, monospace;

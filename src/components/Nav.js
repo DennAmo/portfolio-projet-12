@@ -31,21 +31,21 @@ const Nav = () => {
         </NavLink>
 
         <a href="https://github.com/DennAmo" target="_blank" rel="noreferrer">
-        <li className="mod">
-             GitHub CodeSpace
-        </li>
+          <li className="mod">
+            GitHub CodeSpace
+          </li>
         </a>
 
         <a href="https://www.youtube.com/@AmoGlobine/videos" target="_blank" rel="noreferrer">
-        <li className="mod">
+          <li className="mod">
             Youtube Channel
-        </li>
+          </li>
         </a>
 
         <a href="https://soundcloud.com/amo-globine" target="_blank" rel="noreferrer">
-        <li className="mod">
+          <li className="mod">
             SoundCloud Music
-        </li>
+          </li>
         </a>
 
       </ul>

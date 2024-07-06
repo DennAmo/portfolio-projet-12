@@ -19,11 +19,12 @@
     align-items: center;
     margin-left: 2px;
     width: 25%;
-flex-wrap: wrap;
+    flex-wrap: wrap;
+
     @media screen and (max-width: 568px) {
       width: 100%;
     }
-    
+
     img {
       width: 100%;
       object-fit: fill;
@@ -32,15 +33,15 @@ flex-wrap: wrap;
 
   &__animation {
 
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
   }
 
   &__projects {
     display: flex;
-justify-content: space-around;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from "./pages/home";
 import "./styles/App.scss";
 import Shop from "./pages/shop.js";
