@@ -36,6 +36,9 @@ const AboutmeContent = () => {
       <p>il y a aussi des appels de fonctions, ex. pour permettre à l'I.A d'écrire des résumés de conversations dans un journal, et lui permettre de les lires pour en avoir le contexte lors de l'inférence.</p>
       <p> Je pourrais en parler pendant des heures tout les jours, depuis lors le fonctionnement des I.A me fascine et je passe énormément de temps à en comprendre le fonctionnement de la création d'un model jusqu'a l'utilisation.</p>
 
+      <h2>Test personnalité:</h2>
+      <img className="testimg" src="./assets/test.jpg"></img>
+
     </div>
   );
 };
