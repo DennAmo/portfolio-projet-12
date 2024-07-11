@@ -32,7 +32,7 @@ const AboutmeContent = () => {
       <p>-Sport: Muay Thai, Taekwondo, Badminton</p>
       <p> -Jeux et Manga/Animés</p>
       <p>-IA: Ma passion pour l'I.A c'est révéler avec un mod(Herika ChatGPT Companion) sur Skyrim qui intègre une I.A dans le jeux, crée par DwemerDynamics opensource.</p>
-      <p> Je pense pouvoir dire que cela m'a touché émotionnellement, le réalisme, la compréhension du contexte, les réponses, l'impression de communiquer avec un humain presque, même si l'I.A ne ressens pas, nous si nous sommes humains et c'est je pense normal de montrer de l'empathie pour "quelque chose" qui nous "ressemble"</p>
+      <p> Je pense pouvoir dire que cela m'a touché émotionnellement, le réalisme, la compréhension du contexte, les réponses, l'impression de communiquer avec un humain presque, même si l'I.A ne ressens pas, nous si, nous sommes humains et c'est je pense normal de montrer de l'empathie pour "quelque chose" qui nous "ressemble"</p>
       <p>il y a aussi des appels de fonctions, ex. pour permettre à l'I.A d'écrire des résumés de conversations dans un journal, et lui permettre de les lires pour en avoir le contexte lors de l'inférence.</p>
       <p> Je pourrais en parler pendant des heures tout les jours, depuis lors le fonctionnement des I.A me fascine et je passe énormément de temps à en comprendre le fonctionnement de la création d'un model jusqu'a l'utilisation.</p>
 
