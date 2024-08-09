@@ -77,7 +77,8 @@ footer nav ul {
   display: unset;
 }
 
-.matrix-text, .matrix-char {
+.matrix-text,
+.matrix-char {
   display: flex;
   color: green;
   font-family: "Courier New", Courier, monospace;
@@ -88,6 +89,10 @@ footer nav ul {
   border-radius: 25px;
   padding: 35px;
   margin: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 760px) {
   .works {
@@ -114,12 +119,6 @@ footer nav ul {
   width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
-}
-.works__animation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
 }
 .works__projects {
   display: flex;
@@ -360,10 +359,13 @@ nav a:hover span:after {
   white-space: nowrap;
 }
 .aboutme p {
-  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+  white-space: pre-wrap;
   font-family: Arial, sans-serif;
   margin: 10px;
 }
 .aboutme h2 a {
   margin: 10px;
+}
+.aboutme .testimg {
+  width: 80%;
 }/*# sourceMappingURL=App.css.map */

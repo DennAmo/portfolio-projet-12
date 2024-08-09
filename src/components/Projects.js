@@ -11,7 +11,6 @@ const Projects = () => {
 
   return (
     <div className="works">
-      <div className="works__animation">
         <h3>Click pour aperçu du site</h3>
         <div className="works__projects">
           {project.map((project, index) => (
@@ -28,7 +27,6 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

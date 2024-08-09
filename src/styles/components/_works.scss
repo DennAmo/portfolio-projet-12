@@ -4,6 +4,10 @@
   border-radius: 25px;
   padding: 35px;
   margin: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 
 
   @media screen and (max-width: 760px) {
@@ -29,14 +33,6 @@
       width: 100%;
       object-fit: fill;
     }
-  }
-
-  &__animation {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
   }
 
   &__projects {
