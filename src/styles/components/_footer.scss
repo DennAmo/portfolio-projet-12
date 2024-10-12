@@ -5,6 +5,8 @@ footer {
   flex-wrap: wrap;
 
   nav {
+    display: flex;
+    flex-direction: unset;
     ul {
       width: 90%;
       display: unset;

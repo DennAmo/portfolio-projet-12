@@ -4,7 +4,7 @@ import Home from "./pages/home";
 import "./styles/App.scss";
 import Shop from "./pages/shop.js";
 import Aboutme from "./pages/aboutme.js";
-import Services from "./pages/services.js";
+import Projets from "./pages/projets.js";
 import Header from "./components/Header.js"
 import Footer from "./components/Footer.js"
 
@@ -18,7 +18,7 @@ function App() {
         <Route path="/portfolio" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/aboutme" element={<Aboutme />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Projets />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

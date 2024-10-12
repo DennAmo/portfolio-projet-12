@@ -3,53 +3,44 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
+
     <nav>
       <ul>
+      <NavLink to="/portfolio" className="animated-button1">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
 
-        <NavLink to="/portfolio" className="index">
           <li className="mod">
-            Accueil/Projets
+            Home
           </li>
         </NavLink>
 
-        <NavLink to="/services" className="services">
+
+        <NavLink to="/services" className="animated-button2">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
           <li className="mod">
-            Services
+            Projets
           </li>
         </NavLink>
 
-        <NavLink to="/aboutme" className="aboutmeBTN">
+
+        <NavLink to="/aboutme" className="animated-button3">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
           <li className="mod">
-            A Propos/Contact
+            Contact
           </li>
         </NavLink>
-
-        <NavLink to="/shop" className="shop">
-          <li className="mod">
-            Redbubble Shop
-          </li>
-        </NavLink>
-
-        <a href="https://github.com/DennAmo" target="_blank" rel="noreferrer">
-          <li className="mod">
-            GitHub CodeSpace
-          </li>
-        </a>
-
-        <a href="https://www.youtube.com/@AmoGlobine/videos" target="_blank" rel="noreferrer">
-          <li className="mod">
-            Youtube Channel
-          </li>
-        </a>
-
-        <a href="https://soundcloud.com/amo-globine" target="_blank" rel="noreferrer">
-          <li className="mod">
-            SoundCloud Music
-          </li>
-        </a>
-
       </ul>
     </nav>
+
   );
 };
 
