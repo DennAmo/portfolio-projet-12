@@ -5,12 +5,21 @@ const technologiesLeft = [
     title: 'React',
     img: './assets/react.png',
   },
+  {
+    title: 'Test',
+    img: './assets/react.png',
+  },
+
 ];
 
 const technologiesRight = [
   {
     title: 'Sass',
     img: './assets/sass.png',
+  },
+  {
+    title: 'Test',
+    img: './assets/react.png',
   },
 ];
 
@@ -27,7 +36,7 @@ const Home = () => {
 
     const startClignotement = () => {
       intervalId = setInterval(() => {
-        currentTime += 250;
+        currentTime += 230;
 
         const newSegments = segments.map((segment) => {
           if (segment) return true; 

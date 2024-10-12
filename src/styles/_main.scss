@@ -42,20 +42,23 @@ button {
   align-self: center;
 }
 
-.active {
 
-  li {
-    color: rgb(86, 181, 236);
-  }
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  
 }
+
 
 .btncontainer {
   display: flex;
-
+  background-color: #3f3e3e;
+  border-radius: 25px;
+  margin: 35px;
+  padding: 35px;
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background-color: #000; 
   justify-content: space-around;
 }
 
@@ -65,7 +68,7 @@ button {
   align-items: center;
 }
 
-.tech-button {
+.tech-button, .tech-button2 {
   padding: 15px 30px;
   background-color: #111;
   color: #fff;
@@ -74,11 +77,47 @@ button {
   cursor: pointer;
   outline: none;
   font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  border: 3px solid transparent;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  margin-bottom: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid darken( rgb(50,50,60), 10%);
+    transition: opacity 0.3s, border 0.3s;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    border: 3px solid darken( #00ff00, 10%);
+  }
+
+  
+
 }
 
-.tech-button:hover + .button-extension {
+.tech-button:hover + .button-extension, 
+.tech-button2:hover + .button-extension2 {
   transform: translateX(0);
   opacity: 1;
+}
+
+.button-extension2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 110px; 
+  top: 50%;
+  transform: translateY(-50%) translateX(-50px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .button-extension {
@@ -86,14 +125,14 @@ button {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  right: -86px; 
+  right: -79px; 
   top: 50%;
   transform: translateY(-50%) translateX(-50px);
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
 
-.button-line {
+.button-line, .button-line2 {
   display: flex;
   justify-content: space-between;
   width: 100px; 
@@ -102,7 +141,7 @@ button {
   top: 25%; 
 }
 
-.line-segment {
+.line-segment, .line-segment2 {
   width: 5px; 
   height: 3px;
   background-color: #00ff00;
@@ -110,7 +149,7 @@ button {
   transition: opacity 0.1s ease-in-out;
 }
 
-.line-segment.active {
+.line-segment.active, .line-segment2.active {
   opacity: 1; 
 }
 
@@ -122,63 +161,16 @@ button {
   top: -40px; 
 }
 
-.button-line2 {
-  display: flex;
-  justify-content: space-between;
-  width: 100px; 
-  margin-top: 10px;
-  position: relative;
-  top: 25%; 
-}
-
-.line-segment2 {
-  width: 5px; 
-  height: 3px;
-  background-color: #00ff00;
-  opacity: 0;
-  transition: opacity 0.1s ease-in-out;
-}
-
-.line-segment2.active {
-  opacity: 1; 
-}
-
-.tech-button2 {
-  padding: 15px 30px;
-  background-color: #111;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.tech-button2:hover + .button-extension2 {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.button-extension2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  right: 116px; 
-  top: 50%;
-  transform: translateY(-50%) translateX(-50px);
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
 
 .myself img {
   width: 80%;
   padding-left: 35px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   .btncontainer {
 flex-direction: column;
   }
 
 }
+
