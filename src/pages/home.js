@@ -46,7 +46,7 @@ const Home = () => {
     startClignotement();
 
     return () => clearInterval(intervalId); 
-  }, [isHovered]);
+  }, [isHovered, segments]);
 
   const handleMouseEnter = () => {
     setIsHovered(true); 
