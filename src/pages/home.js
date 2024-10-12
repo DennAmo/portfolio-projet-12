@@ -27,7 +27,7 @@ const Home = () => {
 
     const startClignotement = () => {
       intervalId = setInterval(() => {
-        currentTime += 100;
+        currentTime += 250;
 
         const newSegments = segments.map((segment) => {
           if (segment) return true; 
