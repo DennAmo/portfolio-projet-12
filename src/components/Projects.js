@@ -11,22 +11,22 @@ const Projects = () => {
 
   return (
     <div className="works">
-        <h3>Click pour aperçu du site</h3>
         <div className="works__projects">
           {project.map((project, index) => (
             <div className="works__cards" key={index}>
-              <a target="_blank" rel="noreferrer" href={project.link}>
                 <h2>{project.title}</h2>
                 <img src={project.image} alt={project.title} />
                 <p>{project.description}</p>
-              </a>
               <div className="iconcontain">
               {project.technologies.map((tech) => (
                   <img alt={tech.name} className="icon" src={tech.icon} />
               ))}
             </div>
+            <a href={project.link} target="_blank" rel="noreferrer">
+              <button class="glow-on-hover" type="button">Aperçu du site</button>
+              </a>
               <a href={project.git} target="_blank" rel="noreferrer">
-                View on GitHub
+              <button class="glow-on-hover" type="button">Voir sur GitHub</button>
               </a>
             </div>
           ))}
