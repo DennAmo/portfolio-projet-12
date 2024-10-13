@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 const technologiesLeft = [
   {
     title: 'React',
-    img: './assets/react.png',
+    img: './assets/react.svg',
   },
   {
     title: 'Test',
-    img: './assets/react.png',
+    img: './assets/react.svg',
   },
 
 ];
@@ -15,11 +15,11 @@ const technologiesLeft = [
 const technologiesRight = [
   {
     title: 'Sass',
-    img: './assets/sass.png',
+    img: './assets/sass.svg',
   },
   {
     title: 'Test',
-    img: './assets/react.png',
+    img: './assets/react.svg',
   },
 ];
 

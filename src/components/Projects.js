@@ -20,6 +20,11 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} />
                 <p>{project.description}</p>
               </a>
+              <div className="iconcontain">
+              {project.technologies.map((tech) => (
+                  <img alt={tech.name} className="icon" src={tech.icon} />
+              ))}
+            </div>
               <a href={project.git} target="_blank" rel="noreferrer">
                 View on GitHub
               </a>
