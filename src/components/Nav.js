@@ -6,7 +6,7 @@ const Nav = () => {
 
     <nav>
       <ul>
-      <NavLink to="/portfolio" className="animated-button1">
+      <NavLink to="/home" className="animated-button1">
   <span></span>
   <span></span>
   <span></span>
