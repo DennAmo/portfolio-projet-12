@@ -184,31 +184,6 @@ transition: all 0.3s ease-in-out;
  height: 50px;
 }
 
-ul li a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #ffee10;
-  transition: .5s;
-  transform: scale(.9);
-  z-index: -1;
-}
-
-ul li a:hover::before {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #ffee10;
-}
-
-ul li a:hover {
-  color: #ffee10;
-  box-shadow: 0 0 5px #ffee10;
-  text-shadow: 0 0 5px #ffee10;
-}
-
 .iconcontain{
   display: flex;
 
