@@ -23,10 +23,10 @@ const Projects = () => {
               ))}
             </div>
             <a href={project.link} target="_blank" rel="noreferrer">
-              <button class="glow-on-hover" type="button">Aperçu du site</button>
+              <button className="glow-on-hover" type="button">Aperçu du site</button>
               </a>
               <a href={project.git} target="_blank" rel="noreferrer">
-              <button class="glow-on-hover" type="button">Voir sur GitHub</button>
+              <button className="glow-on-hover" type="button">Voir sur GitHub</button>
               </a>
             </div>
           ))}

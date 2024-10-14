@@ -62,23 +62,34 @@ button {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.tech-button, .tech-button2 {
-  padding: 15px 30px;
+.columntop {
+  padding-bottom: 80px;
+}
+
+.columnbot {
+  padding-top: 80px;
+}
+
+.columnbot, .columntop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tech-button, .tech-button2, .tech-button3, .tech-button4 {
+  padding: 20px 40px;
   background-color: #111;
   color: #fff;
   font-size: 18px;
-  border: none;
-  cursor: pointer;
-  outline: none;
+  width: 100%;
   font-family: "Courier New", Courier, monospace;
   position: relative;
-  border: 3px solid transparent;
   transition: color 0.5s, transform 0.2s, background-color 0.2s;
   margin-bottom: 15px;
 }
-.tech-button::before, .tech-button2::before {
+.tech-button::before, .tech-button2::before, .tech-button3::before, .tech-button4::before {
   content: "";
   position: absolute;
   top: 0;
@@ -88,26 +99,36 @@ button {
   border: 3px solid #1b1b20;
   transition: opacity 0.3s, border 0.3s;
 }
-.tech-button:hover::before, .tech-button2:hover::before {
+.tech-button:hover::before, .tech-button2:hover::before, .tech-button3:hover::before, .tech-button4:hover::before {
   opacity: 1;
   border: 3px solid #00cc00;
 }
 
 .tech-button:hover + .button-extension,
-.tech-button2:hover + .button-extension2 {
+.tech-button2:hover + .button-extension2,
+.tech-button3:hover + .button-extension3,
+.tech-button4:hover + .button-extension4 {
   transform: translateX(0);
   opacity: 1;
 }
 
 .button-extension2 {
-  right: 110px;
+  right: 149px;
 }
 
 .button-extension {
-  right: -79px;
+  right: -100px;
 }
 
-.button-extension, .button-extension2 {
+.button-extension3 {
+  left: 137px;
+}
+
+.button-extension4 {
+  right: -100px;
+}
+
+.button-extension, .button-extension2, .button-extension3, .button-extension4 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,7 +139,7 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-.button-line, .button-line2 {
+.button-line, .button-line2, .button-line3, .button-line4 {
   display: flex;
   justify-content: space-between;
   width: 100px;
@@ -127,7 +148,7 @@ button {
   top: 25%;
 }
 
-.line-segment, .line-segment2 {
+.line-segment, .line-segment2, .line-segment3, .line-segment4 {
   width: 5px;
   height: 3px;
   background-color: #00ff00;
@@ -135,7 +156,7 @@ button {
   transition: opacity 0.1s ease-in-out;
 }
 
-.line-segment.active, .line-segment2.active {
+.line-segment.active, .line-segment2.active, .line-segment3.active, .line-segment4.active {
   opacity: 1;
 }
 
