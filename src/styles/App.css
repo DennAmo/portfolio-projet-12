@@ -239,8 +239,12 @@ footer nav {
   flex-direction: unset;
 }
 footer nav ul {
-  width: 90%;
-  display: unset;
+display: flex;
+}
+
+footer nav ul a {
+  min-width: none;
+  width: none;
 }
 
 .matrix-text,
