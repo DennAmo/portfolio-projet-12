@@ -42,13 +42,10 @@ button {
   align-self: center;
 }
 
-
-
 *, *::after, *::before {
   box-sizing: border-box;
   
 }
-
 
 .btncontainer {
   display: flex;
@@ -195,9 +192,21 @@ transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 860px) {
-  .btncontainer {
+  .btncontainer, .columntop, .columnbot {
 flex-direction: column;
+height: unset;
+  }
+  .tech-button, .tech-button2, .tech-button3, .tech-button4 {
+    max-width: 125px;
   }
 
 }
 
+@media (max-width: 450px) {
+  .aboutme .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

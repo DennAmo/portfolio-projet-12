@@ -183,8 +183,19 @@ button {
 }
 
 @media (max-width: 860px) {
-  .btncontainer {
+  .btncontainer, .columntop, .columnbot {
     flex-direction: column;
+    height: unset;
+  }
+  .tech-button, .tech-button2, .tech-button3, .tech-button4 {
+    max-width: 125px;
+  }
+}
+@media (max-width: 450px) {
+  .aboutme .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 header {
@@ -752,14 +763,9 @@ nav a {
 .aboutme {
   margin: 60px;
 }
-.aboutme a {
-  font-size: 24px;
-  color: yellow;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5px;
-  width: 11%;
-  white-space: nowrap;
+.aboutme .aboutme * {
+  padding: 0;
+  margin: 0;
 }
 .aboutme p {
   white-space: pre-wrap;
@@ -771,4 +777,65 @@ nav a {
 }
 .aboutme .testimg {
   width: 80%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 30%;
+}
+
+.btn {
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  transition: 1s ease-in-out;
+}
+
+.aboutme .column {
+  display: flex;
+  gap: 15px;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: rgb(19, 110, 91);
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: rgb(56, 44, 44);
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */

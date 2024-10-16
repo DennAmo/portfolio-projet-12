@@ -32,7 +32,7 @@ const technologiesBot = [
 
 const technologiesLeft = [
   {
-    title: 'Html 5',
+    title: 'Html5',
     img: './assets/html.svg',
   },
   {
