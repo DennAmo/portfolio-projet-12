@@ -8,7 +8,7 @@ const Footer = () => {
     <nav>
       <ul>
       <h4>Navigation Rapide</h4>
-        <NavLink to="/portfolio" className="index">
+        <NavLink to="/home" className="index">
           <li className="mod">
             Home
           </li>
