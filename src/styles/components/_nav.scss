@@ -3,7 +3,7 @@ nav {
 
 }
 
-nav ul {
+header nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -11,7 +11,6 @@ nav ul {
  
   a{
     width: 15%;
-    height: 55px;
     min-width: 125px;
 
   }

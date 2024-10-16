@@ -56,7 +56,6 @@ button {
   justify-content: center;
   align-items: center;
   height: 90vh;
-  justify-content: space-around;
 }
 
 .button-container {
@@ -67,11 +66,11 @@ button {
 }
 
 .columntop {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .columnbot {
- padding-top: 80px; 
+ padding-top: 40px; 
 }
 
 .columnbot, .columntop {
@@ -188,7 +187,8 @@ transition: all 0.3s ease-in-out;
 
 .myself img {
   width: 80%;
-  padding-left: 35px;
+margin-right: 105px;
+  margin-left: 95px;
 }
 
 @media (max-width: 860px) {
@@ -198,6 +198,12 @@ height: unset;
   }
   .tech-button, .tech-button2, .tech-button3, .tech-button4 {
     max-width: 125px;
+  }
+  .myself  {
+    display: flex;
+    justify-content: center;
+  margin-right: 0px;
+    margin-left: 0px;
   }
 
 }

@@ -1,17 +1,24 @@
 footer {
   background-color: #111;
   padding: 1rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
 
   nav {
     display: flex;
     flex-direction: unset;
     ul {
       width: 90%;
-      display: unset;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      height: 15px;
+      gap: 30px;
+      list-style: none;
+    }
+    li:hover{
+      color: purple;
     }
   }
+
 }
 
 .matrix-text,

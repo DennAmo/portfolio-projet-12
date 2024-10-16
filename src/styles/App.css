@@ -55,7 +55,6 @@ button {
   justify-content: center;
   align-items: center;
   height: 90vh;
-  justify-content: space-around;
 }
 
 .button-container {
@@ -66,11 +65,11 @@ button {
 }
 
 .columntop {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .columnbot {
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .columnbot, .columntop {
@@ -179,7 +178,8 @@ button {
 
 .myself img {
   width: 80%;
-  padding-left: 35px;
+  margin-right: 105px;
+  margin-left: 95px;
 }
 
 @media (max-width: 860px) {
@@ -189,6 +189,12 @@ button {
   }
   .tech-button, .tech-button2, .tech-button3, .tech-button4 {
     max-width: 125px;
+  }
+  .myself {
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 }
 @media (max-width: 450px) {
@@ -217,8 +223,6 @@ header span {
 footer {
   background-color: #111;
   padding: 1rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
 }
 footer nav {
   display: flex;
@@ -226,7 +230,15 @@ footer nav {
 }
 footer nav ul {
   width: 90%;
-  display: unset;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 15px;
+  gap: 30px;
+  list-style: none;
+}
+footer nav li:hover {
+  color: purple;
 }
 
 .matrix-text,
@@ -414,15 +426,14 @@ nav {
   width: 100%;
 }
 
-nav ul {
+header nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: space-evenly;
 }
-nav ul a {
+header nav ul a {
   width: 15%;
-  height: 55px;
   min-width: 125px;
 }
 
