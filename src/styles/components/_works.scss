@@ -42,10 +42,10 @@
   }
 }
 
-.works__image  {
+.works__image {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Pour des bords arrondis */
+  border-radius: 8px;
   transition: all 0.4s ease-in-out;
 }
 
@@ -57,17 +57,17 @@
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 255, 150, 0.6); /* Effet lumineux */
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.6);
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
 
 .works__image:hover::before {
-  opacity: 1; /* Le contour apparaît au hover */
+  opacity: 1;
 }
 
 .works__image:hover {
-  transform: scale(1.05); /* Légère mise en avant au hover */
+  transform: scale(1.05);
 }
 
 
@@ -90,7 +90,7 @@
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
   top: -2px;
-  left:-2px;
+  left: -2px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
@@ -127,8 +127,15 @@
 }
 
 @keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
-}
+  0% {
+    background-position: 0 0;
+  }
 
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}

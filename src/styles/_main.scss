@@ -26,7 +26,7 @@ main {
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -43,9 +43,11 @@ button {
   align-self: center;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
-  
+
 }
 
 .btncontainer {
@@ -75,24 +77,26 @@ button {
 }
 
 .columnbot {
- padding-top: 40px; 
+  padding-top: 40px;
 }
 
-.columnbot, .columntop {
+.columnbot,
+.columntop {
   display: flex;
   justify-content: space-between;
 }
 
-.tech-button, .tech-button2, .tech-button3, .tech-button4 {
+.tech-button,
+.tech-button2,
+.tech-button3,
+.tech-button4 {
 
   padding: 20px 40px;
   background-color: #111;
   color: #fff;
   font-size: 18px;
   width: 100%;
-  font-family: 'Courier New', Courier, monospace;
   position: relative;
-  transition: color 0.5s, transform 0.2s, background-color 0.2s;
   margin-bottom: 15px;
 
   &::before {
@@ -102,104 +106,124 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 3px solid darken( rgb(50,50,60), 10%);
+    border: 3px solid darken(rgb(50, 50, 60), 10%);
     transition: opacity 0.3s, border 0.3s;
   }
 
   &:hover::before {
     opacity: 1;
-    border: 3px solid darken( #00ff00, 10%);
+    border: 3px solid darken(#00ff00, 10%);
   }
 
-  
+
 
 }
 
-.tech-button:hover + .button-extension, 
-.tech-button2:hover + .button-extension2,
-.tech-button3:hover + .button-extension3,
-.tech-button4:hover + .button-extension4 {
+.tech-button:hover+.button-extension,
+.tech-button2:hover+.button-extension2,
+.tech-button3:hover+.button-extension3,
+.tech-button4:hover+.button-extension4 {
   opacity: 1;
   transform: translateX(0);
   visibility: inherit;
 }
 
 .button-extension2 {
-  right: 133px;  visibility: hidden;
+  right: 133px;
+  visibility: hidden;
 }
 
 .button-extension {
-  right: -100px; 
+  right: -100px;
+
   visibility: hidden;
 }
 
 .button-extension3 {
-  left: 137px;  visibility: hidden;
+  left: 15px;
+  visibility: hidden;
+  margin-top: -60px;
 }
 
 .button-extension4 {
-  right: -100px;   visibility: hidden;
+  left: 28px;
+  visibility: hidden;
+  margin-top: 60px;
 }
 
-.button-extension, .button-extension2, .button-extension3, .button-extension4 {
-display: flex;
-flex-direction: column;
-align-items: center;
-position: absolute;
-top: 50%;
-opacity: 0;
-transition: all 0.3s ease-in-out;
+.button-extension,
+.button-extension2,
+.button-extension3,
+.button-extension4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.button-line, .button-line2, .button-line3, .button-line4 {
+.button-line,
+.button-line2,
+.button-line3,
+.button-line4 {
   display: flex;
   justify-content: space-between;
-  width: 100px; 
+  width: 100px;
   margin-top: 10px;
   position: relative;
-  top: 25%; 
+  top: 25%;
 }
 
-.line-segment, .line-segment2, .line-segment3, .line-segment4 {
-  width: 5px; 
+.line-segment,
+.line-segment2,
+.line-segment3,
+.line-segment4 {
+  width: 5px;
   height: 3px;
   background-color: #00ff00;
   opacity: 0;
   transition: opacity 0.1s ease-in-out;
 }
 
-.line-segment.active, .line-segment2.active, .line-segment3.active, .line-segment4.active {
-  opacity: 1; 
+.line-segment.active,
+.line-segment2.active,
+.line-segment3.active,
+.line-segment4.active {
+  opacity: 1;
 }
 
 .button-icon {
   width: 30px;
   height: 30px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   position: relative;
-  top: -40px; 
+  top: -40px;
 }
 
 
 .icon {
   padding-right: 10px;
- height: 50px;
+  height: 50px;
 }
 
-.iconcontain{
+.iconcontain {
   display: flex;
 
 }
-
 .myself img {
-  width: 80%;
-margin-right: 105px;
+  width: 90%;
+}
+
+.myself {
+  margin-right: 50px;
   margin-left: 95px;
 }
 
 .title {
   text-align: center;
-   font-family: 'Bebas Neue';
+  font-family: 'Bebas Neue';
 }
 
 .columnright {
@@ -207,33 +231,48 @@ margin-right: 105px;
 }
 
 @media (max-width: 860px) {
-  .btncontainer, .columntop, .columnbot {
-flex-direction: column;
-height: unset;
+
+  .btncontainer,
+  .columntop,
+  .columnbot {
+    flex-direction: column;
+    height: unset;
   }
-  .tech-button, .tech-button2, .tech-button3, .tech-button4 {
+
+  .tech-button,
+  .tech-button2,
+  .tech-button3,
+  .tech-button4 {
     max-width: 125px;
   }
-  .myself  {
+
+  .myself {
     display: flex;
     justify-content: center;
-  margin-right: 0px;
+    margin-right: 0px;
     margin-left: 0px;
   }
+
   .button-extension2 {
-    right: 123px; 
+    right: 126px;
+    visibility: hidden;
   }
   
   .button-extension {
-    right: -98px; 
+    right: -100px;
+    visibility: hidden;
   }
   
   .button-extension3 {
-    right: -83px; 
+    left: 174px;
+    visibility: hidden;
+    margin-top: initial;
   }
   
   .button-extension4 {
-    left: 123px; 
+    right: -195px;
+    visibility: hidden;
+    margin-top: initial;
   }
 
 }

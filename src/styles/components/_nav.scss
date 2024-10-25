@@ -8,8 +8,8 @@ header nav ul {
   padding: 0;
   display: flex;
   justify-content: space-evenly;
- 
-  a{
+
+  a {
     width: 15%;
     min-width: 125px;
 
@@ -19,44 +19,48 @@ header nav ul {
 @keyframes animateTop {
   0% {
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
+
   100% {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
 @keyframes animateBottom {
   0% {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
+
   100% {
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
 @keyframes animateRight {
   0% {
     -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
+
   100% {
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 }
 
 @keyframes animateLeft {
   0% {
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    transform: translateY(-100%);
   }
+
   100% {
     -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
 }
 
@@ -66,22 +70,23 @@ header nav ul {
   margin: 12px;
   display: inline-block;
   -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
   overflow: hidden;
   color: #f7d4d4;
   font-size: 20px;
   text-align: center;
   text-decoration: none;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-          &.active{
-            overflow: initial;
-          }
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+  &.active {
+    overflow: initial;
+  }
 }
 
 .animated-button1::before {
   content: '';
-  
+
   position: absolute;
   top: 0px;
   left: 0px;
@@ -109,7 +114,7 @@ header nav ul {
   background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
   background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
   -webkit-animation: 2s animateTop linear infinite;
-          animation: 2s animateTop linear infinite;
+  animation: 2s animateTop linear infinite;
 }
 
 .animated-button1 span:nth-child(2) {
@@ -120,7 +125,7 @@ header nav ul {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
   background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
   -webkit-animation: 2s animateRight linear -1s infinite;
-          animation: 2s animateRight linear -1s infinite;
+  animation: 2s animateRight linear -1s infinite;
 }
 
 .animated-button1 span:nth-child(3) {
@@ -131,7 +136,7 @@ header nav ul {
   background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#d92626));
   background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
   -webkit-animation: 2s animateBottom linear infinite;
-          animation: 2s animateBottom linear infinite;
+  animation: 2s animateBottom linear infinite;
 }
 
 .animated-button1 span:nth-child(4) {
@@ -142,7 +147,7 @@ header nav ul {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#d92626));
   background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
   -webkit-animation: 2s animateLeft linear -1s infinite;
-          animation: 2s animateLeft linear -1s infinite;
+  animation: 2s animateLeft linear -1s infinite;
 }
 
 .animated-button2 {
@@ -151,17 +156,18 @@ header nav ul {
   margin: 12px;
   display: inline-block;
   -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
   overflow: hidden;
   color: #f7e6d4;
   font-size: 20px;
   text-align: center;
   text-decoration: none;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-          &.active{
-            overflow: initial;
-          }
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+  &.active {
+    overflow: initial;
+  }
 }
 
 .animated-button2::before {
@@ -194,7 +200,7 @@ header nav ul {
   background: -webkit-gradient(linear, right top, left top, from(rgba(43, 26, 8, 0)), to(#d98026));
   background: linear-gradient(to left, rgba(43, 26, 8, 0), #d98026);
   -webkit-animation: 2s animateTop linear infinite;
-          animation: 2s animateTop linear infinite;
+  animation: 2s animateTop linear infinite;
 }
 
 .animated-button2 span:nth-child(2) {
@@ -205,7 +211,7 @@ header nav ul {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 26, 8, 0)), to(#d98026));
   background: linear-gradient(to top, rgba(43, 26, 8, 0), #d98026);
   -webkit-animation: 2s animateRight linear -1s infinite;
-          animation: 2s animateRight linear -1s infinite;
+  animation: 2s animateRight linear -1s infinite;
 }
 
 .animated-button2 span:nth-child(3) {
@@ -216,7 +222,7 @@ header nav ul {
   background: -webkit-gradient(linear, left top, right top, from(rgba(43, 26, 8, 0)), to(#d98026));
   background: linear-gradient(to right, rgba(43, 26, 8, 0), #d98026);
   -webkit-animation: 2s animateBottom linear infinite;
-          animation: 2s animateBottom linear infinite;
+  animation: 2s animateBottom linear infinite;
 }
 
 .animated-button2 span:nth-child(4) {
@@ -227,7 +233,7 @@ header nav ul {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 26, 8, 0)), to(#d98026));
   background: linear-gradient(to bottom, rgba(43, 26, 8, 0), #d98026);
   -webkit-animation: 2s animateLeft linear -1s infinite;
-          animation: 2s animateLeft linear -1s infinite;
+  animation: 2s animateLeft linear -1s infinite;
 }
 
 .animated-button3 {
@@ -236,12 +242,13 @@ header nav ul {
   margin: 12px;
   display: inline-block;
   -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
   overflow: hidden;
   color: #f7f7d4;
   font-size: 20px;
   text-align: center;
   text-decoration: none;
+
   &.active {
     overflow: initial;
   }
@@ -277,7 +284,7 @@ header nav ul {
   background: -webkit-gradient(linear, right top, left top, from(rgba(43, 43, 8, 0)), to(#d9d926));
   background: linear-gradient(to left, rgba(43, 43, 8, 0), #d9d926);
   -webkit-animation: 2s animateTop linear infinite;
-          animation: 2s animateTop linear infinite;
+  animation: 2s animateTop linear infinite;
 }
 
 .animated-button3 span:nth-child(2) {
@@ -288,7 +295,7 @@ header nav ul {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 43, 8, 0)), to(#d9d926));
   background: linear-gradient(to top, rgba(43, 43, 8, 0), #d9d926);
   -webkit-animation: 2s animateRight linear -1s infinite;
-          animation: 2s animateRight linear -1s infinite;
+  animation: 2s animateRight linear -1s infinite;
 }
 
 .animated-button3 span:nth-child(3) {
@@ -299,7 +306,7 @@ header nav ul {
   background: -webkit-gradient(linear, left top, right top, from(rgba(43, 43, 8, 0)), to(#d9d926));
   background: linear-gradient(to right, rgba(43, 43, 8, 0), #d9d926);
   -webkit-animation: 2s animateBottom linear infinite;
-          animation: 2s animateBottom linear infinite;
+  animation: 2s animateBottom linear infinite;
 }
 
 .animated-button3 span:nth-child(4) {
@@ -310,12 +317,12 @@ header nav ul {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 43, 8, 0)), to(#d9d926));
   background: linear-gradient(to bottom, rgba(43, 43, 8, 0), #d9d926);
   -webkit-animation: 2s animateLeft linear -1s infinite;
-          animation: 2s animateLeft linear -1s infinite;
+  animation: 2s animateLeft linear -1s infinite;
 }
 
 nav a {
   text-decoration: none;
-  
+
 }
 
 .active {
@@ -327,10 +334,11 @@ nav a {
 }
 
 @media screen and (max-width: 860px) {
-   ul {
+  ul {
     display: flex;
     flex-direction: column;
   }
+
   nav {
     display: flex;
     justify-content: center;

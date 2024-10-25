@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -44,7 +43,9 @@ button {
   align-self: center;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -78,23 +79,28 @@ button {
   padding-top: 40px;
 }
 
-.columnbot, .columntop {
+.columnbot,
+.columntop {
   display: flex;
   justify-content: space-between;
 }
 
-.tech-button, .tech-button2, .tech-button3, .tech-button4 {
+.tech-button,
+.tech-button2,
+.tech-button3,
+.tech-button4 {
   padding: 20px 40px;
   background-color: #111;
   color: #fff;
   font-size: 18px;
   width: 100%;
-  font-family: "Courier New", Courier, monospace;
   position: relative;
-  transition: color 0.5s, transform 0.2s, background-color 0.2s;
   margin-bottom: 15px;
 }
-.tech-button::before, .tech-button2::before, .tech-button3::before, .tech-button4::before {
+.tech-button::before,
+.tech-button2::before,
+.tech-button3::before,
+.tech-button4::before {
   content: "";
   position: absolute;
   top: 0;
@@ -104,7 +110,10 @@ button {
   border: 3px solid #1b1b20;
   transition: opacity 0.3s, border 0.3s;
 }
-.tech-button:hover::before, .tech-button2:hover::before, .tech-button3:hover::before, .tech-button4:hover::before {
+.tech-button:hover::before,
+.tech-button2:hover::before,
+.tech-button3:hover::before,
+.tech-button4:hover::before {
   opacity: 1;
   border: 3px solid #00cc00;
 }
@@ -129,16 +138,21 @@ button {
 }
 
 .button-extension3 {
-  left: 137px;
+  left: 15px;
   visibility: hidden;
+  margin-top: -60px;
 }
 
 .button-extension4 {
-  right: -100px;
+  left: 28px;
   visibility: hidden;
+  margin-top: 60px;
 }
 
-.button-extension, .button-extension2, .button-extension3, .button-extension4 {
+.button-extension,
+.button-extension2,
+.button-extension3,
+.button-extension4 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,7 +162,10 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-.button-line, .button-line2, .button-line3, .button-line4 {
+.button-line,
+.button-line2,
+.button-line3,
+.button-line4 {
   display: flex;
   justify-content: space-between;
   width: 100px;
@@ -157,7 +174,10 @@ button {
   top: 25%;
 }
 
-.line-segment, .line-segment2, .line-segment3, .line-segment4 {
+.line-segment,
+.line-segment2,
+.line-segment3,
+.line-segment4 {
   width: 5px;
   height: 3px;
   background-color: #00ff00;
@@ -165,7 +185,10 @@ button {
   transition: opacity 0.1s ease-in-out;
 }
 
-.line-segment.active, .line-segment2.active, .line-segment3.active, .line-segment4.active {
+.line-segment.active,
+.line-segment2.active,
+.line-segment3.active,
+.line-segment4.active {
   opacity: 1;
 }
 
@@ -187,8 +210,11 @@ button {
 }
 
 .myself img {
-  width: 80%;
-  margin-right: 105px;
+  width: 90%;
+}
+
+.myself {
+  margin-right: 50px;
   margin-left: 95px;
 }
 
@@ -202,11 +228,16 @@ button {
 }
 
 @media (max-width: 860px) {
-  .btncontainer, .columntop, .columnbot {
+  .btncontainer,
+  .columntop,
+  .columnbot {
     flex-direction: column;
     height: unset;
   }
-  .tech-button, .tech-button2, .tech-button3, .tech-button4 {
+  .tech-button,
+  .tech-button2,
+  .tech-button3,
+  .tech-button4 {
     max-width: 125px;
   }
   .myself {
@@ -216,16 +247,22 @@ button {
     margin-left: 0px;
   }
   .button-extension2 {
-    right: 123px;
+    right: 126px;
+    visibility: hidden;
   }
   .button-extension {
-    right: -98px;
+    right: -100px;
+    visibility: hidden;
   }
   .button-extension3 {
-    right: -83px;
+    left: 174px;
+    visibility: hidden;
+    margin-top: initial;
   }
   .button-extension4 {
-    left: 123px;
+    right: -195px;
+    visibility: hidden;
+    margin-top: initial;
   }
 }
 @media (max-width: 450px) {
@@ -324,7 +361,7 @@ footer nav li:hover {
 .works__image {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Pour des bords arrondis */
+  border-radius: 8px;
   transition: all 0.4s ease-in-out;
 }
 
@@ -336,17 +373,17 @@ footer nav li:hover {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 255, 150, 0.6); /* Effet lumineux */
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.6);
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
 
 .works__image:hover::before {
-  opacity: 1; /* Le contour apparaît au hover */
+  opacity: 1;
 }
 
 .works__image:hover {
-  transform: scale(1.05); /* Légère mise en avant au hover */
+  transform: scale(1.05);
 }
 
 .glow-on-hover {

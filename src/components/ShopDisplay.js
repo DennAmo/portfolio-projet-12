@@ -8,22 +8,22 @@ const ShopDisplay = () => {
   useEffect(() => {
     setShopItems(Shop);
   }, []);
-    return (
-        <div className="product-grid">
-          <h2 className='title'>Mes Oeuvres par IA</h2>
-          {shopItems.map((item, index) => (
-            <div key={index} className="product-item">
-              <a rel="noreferrer" target="_blank" href={item.link}>
-                <img src={item.image} alt={item.alt} />
-                <h1>{item.title}</h1>
-                <div className="price">
-                  <span>{item.price}</span>
-                </div>
-              </a>
+  return (
+    <div className="product-grid">
+      <h2 className='title'>Mes Oeuvres par IA</h2>
+      {shopItems.map((item, index) => (
+        <div key={index} className="product-item">
+          <a rel="noreferrer" target="_blank" href={item.link}>
+            <img src={item.image} alt={item.alt} />
+            <h1>{item.title}</h1>
+            <div className="price">
+              <span>{item.price}</span>
             </div>
-          ))}
+          </a>
         </div>
-    );
-  }
+      ))}
+    </div>
+  );
+}
 
 export default ShopDisplay;

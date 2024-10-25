@@ -6,11 +6,11 @@ const Nav = () => {
 
     <nav>
       <ul>
-      <NavLink to="/home" className="animated-button1">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
+        <NavLink to="/home" className="animated-button1">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
 
           <li className="mod">
             Home
@@ -19,10 +19,10 @@ const Nav = () => {
 
 
         <NavLink to="/services" className="animated-button2">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           <li className="mod">
             Projets
           </li>
@@ -30,10 +30,10 @@ const Nav = () => {
 
 
         <NavLink to="/aboutme" className="animated-button3">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           <li className="mod">
             Contact
           </li>

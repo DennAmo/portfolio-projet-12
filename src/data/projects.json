@@ -6,8 +6,14 @@
     "link": "https://dennamo.github.io/booki/",
     "git": "https://github.com/DennAmo/booki ",
     "technologies": [
-      { "name": "HTML", "icon": "/assets/html.svg" },
-      { "name": "CSS", "icon": "/assets/css.svg" }
+      {
+        "name": "HTML",
+        "icon": "/assets/html.svg"
+      },
+      {
+        "name": "CSS",
+        "icon": "/assets/css.svg"
+      }
     ]
   },
   {
@@ -17,9 +23,18 @@
     "link": "https://dennamo.github.io/Ohmyfood",
     "git": "https://github.com/DennAmo/Ohmyfood",
     "technologies": [
-      { "name": "HTML", "icon": "/assets/html.svg" },
-      { "name": "CSS", "icon": "/assets/css.svg" },
-      { "name": "Sass", "icon": "/assets/sass.svg" }
+      {
+        "name": "HTML",
+        "icon": "/assets/html.svg"
+      },
+      {
+        "name": "CSS",
+        "icon": "/assets/css.svg"
+      },
+      {
+        "name": "Sass",
+        "icon": "/assets/sass.svg"
+      }
     ]
   },
   {
@@ -29,11 +44,26 @@
     "link": "https://kasapreview.netlify.app",
     "git": "https://github.com/DennAmo/kasa",
     "technologies": [
-      { "name": "HTML", "icon": "/assets/html.svg" },
-      { "name": "CSS", "icon": "/assets/css.svg" },
-      { "name": "Sass", "icon": "/assets/sass.svg" },
-      { "name": "React", "icon": "/assets/react.svg" },
-      { "name": "JavaScript", "icon": "/assets/js.svg" }
+      {
+        "name": "HTML",
+        "icon": "/assets/html.svg"
+      },
+      {
+        "name": "CSS",
+        "icon": "/assets/css.svg"
+      },
+      {
+        "name": "Sass",
+        "icon": "/assets/sass.svg"
+      },
+      {
+        "name": "React",
+        "icon": "/assets/react.svg"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "/assets/js.svg"
+      }
     ]
   }
 ]

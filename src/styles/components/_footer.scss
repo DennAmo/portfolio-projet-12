@@ -5,6 +5,7 @@ footer {
   nav {
     display: flex;
     flex-direction: unset;
+
     ul {
       width: 90%;
       display: flex;
@@ -14,7 +15,8 @@ footer {
       gap: 30px;
       list-style: none;
     }
-    li:hover{
+
+    li:hover {
       color: purple;
     }
   }
