@@ -104,9 +104,9 @@ const Home = () => {
   };
 
   return (<>
-
+ <h2 className='title'>Accueil</h2>
     <div className="btncontainer">
-
+   
       <div> <div className='columnleft'>
         {technologiesLeft.map((tech, index) => (
           <div className="button-container" key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

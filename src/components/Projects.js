@@ -10,12 +10,14 @@ const Projects = () => {
 
 
   return (
+    <>
+    <h2 className='title'>Mes Projets</h2>
     <div className="works">
         <div className="works__projects">
           {project.map((project, index) => (
             <div className="works__cards" key={index}>
                 <h2>{project.title}</h2>
-                <img src={project.image} alt={project.title} />
+                <img className="works__image" src={project.image} alt={project.title} />
                 <p>{project.description}</p>
               <div className="iconcontain">
               {project.technologies.map((tech) => (
@@ -32,6 +34,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
+      </>
   );
 };
 

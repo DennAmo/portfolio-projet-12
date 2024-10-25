@@ -1,13 +1,10 @@
 import React from "react";
-import { NavLink
-
- } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 const Footer = () => {
   return (
       <footer>
     <nav>
       <ul>
-      <h4>Navigation Rapide</h4>
         <NavLink to="/home" className="index">
           <li className="mod">
             Home
@@ -43,8 +40,8 @@ const Footer = () => {
             Youtube Channel
           </li>
         </a>
-        <h5>Aubry Dennis © 2024</h5>
       </ul>
+      <h5>Aubry Dennis © 2024</h5>
     </nav>
       </footer>
   );

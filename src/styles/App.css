@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -26,6 +27,7 @@ main {
 }
 
 * {
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -61,6 +63,10 @@ button {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.column {
   justify-content: center;
 }
 
@@ -107,24 +113,29 @@ button {
 .tech-button2:hover + .button-extension2,
 .tech-button3:hover + .button-extension3,
 .tech-button4:hover + .button-extension4 {
-  transform: translateX(0);
   opacity: 1;
+  transform: translateX(0);
+  visibility: inherit;
 }
 
 .button-extension2 {
-  right: 149px;
+  right: 133px;
+  visibility: hidden;
 }
 
 .button-extension {
   right: -100px;
+  visibility: hidden;
 }
 
 .button-extension3 {
   left: 137px;
+  visibility: hidden;
 }
 
 .button-extension4 {
   right: -100px;
+  visibility: hidden;
 }
 
 .button-extension, .button-extension2, .button-extension3, .button-extension4 {
@@ -133,7 +144,6 @@ button {
   align-items: center;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) translateX(-50px);
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -182,6 +192,15 @@ button {
   margin-left: 95px;
 }
 
+.title {
+  text-align: center;
+  font-family: "Bebas Neue";
+}
+
+.columnright {
+  margin-left: 7px;
+}
+
 @media (max-width: 860px) {
   .btncontainer, .columntop, .columnbot {
     flex-direction: column;
@@ -195,6 +214,18 @@ button {
     justify-content: center;
     margin-right: 0px;
     margin-left: 0px;
+  }
+  .button-extension2 {
+    right: 123px;
+  }
+  .button-extension {
+    right: -98px;
+  }
+  .button-extension3 {
+    right: -83px;
+  }
+  .button-extension4 {
+    left: 123px;
   }
 }
 @media (max-width: 450px) {
@@ -288,6 +319,34 @@ footer nav li:hover {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.works__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Pour des bords arrondis */
+  transition: all 0.4s ease-in-out;
+}
+
+.works__image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.6); /* Effet lumineux */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.works__image:hover::before {
+  opacity: 1; /* Le contour apparaît au hover */
+}
+
+.works__image:hover {
+  transform: scale(1.05); /* Légère mise en avant au hover */
 }
 
 .glow-on-hover {
