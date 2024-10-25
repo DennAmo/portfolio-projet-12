@@ -15,13 +15,13 @@ const Projects = () => {
       <div className="works">
         <div className="works__projects">
           {project.map((project, index) => (
-            <div className="works__cards" key={index}>
+            <div className="works__cards" key={project.id || index}>
               <h2>{project.title}</h2>
               <img className="works__image" src={project.image} alt={project.title} />
               <p>{project.description}</p>
               <div className="iconcontain">
-                {project.technologies.map((tech) => (
-                  <img alt={tech.name} className="icon" src={tech.icon} />
+                {project.technologies.map((tech, techIndex) => (
+                  <img alt={tech.name} key={techIndex} className="icon" src={tech.icon} />
                 ))}
               </div>
               <a href={project.link} target="_blank" rel="noreferrer">
