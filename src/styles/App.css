@@ -796,6 +796,9 @@ nav a {
     display: flex;
     flex-direction: column;
   }
+  footer {
+    padding-bottom: 25vh;
+  }
   nav {
     display: flex;
     justify-content: center;
