@@ -9,8 +9,9 @@ const ShopDisplay = () => {
     setShopItems(Shop);
   }, []);
   return (
+    <>
+    <h2 className='title'>Mes Oeuvres par IA</h2>
     <div className="product-grid">
-      <h2 className='title'>Mes Oeuvres par IA</h2>
       {shopItems.map((item, index) => (
         <div key={index} className="product-item">
           <a rel="noreferrer" target="_blank" href={item.link}>
@@ -23,6 +24,7 @@ const ShopDisplay = () => {
         </div>
       ))}
     </div>
+    </>
   );
 }
 
