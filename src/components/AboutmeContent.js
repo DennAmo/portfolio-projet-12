@@ -25,10 +25,10 @@ const AboutmeContent = () => {
               </div>
             </a>
 
-            <a className="container" href="https://chat.google.com/room/AAAAvaJ2eyU?cls=7">
+            <a className="container" href="https://www.linkedin.com/in/dennis-aubry/">
               <div className="center">
                 <button className="btn">
-                  <span>Google Chat</span>
+                  <span>LinkedIn</span>
                 </button>
               </div>
             </a>
