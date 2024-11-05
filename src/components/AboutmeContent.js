@@ -17,7 +17,7 @@ const AboutmeContent = () => {
         <div className="aboutme">
 
           <div className='column'>
-            <a className="container" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=dennis.aubry@gmail.com@gmail.com">
+          <a className="container" href="mailto:dennis.aubry@proton.me">
               <div className="center">
                 <button className="btn">
                   <span>Gmail</span>
