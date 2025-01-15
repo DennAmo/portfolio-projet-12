@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from "./pages/home";
 import "./styles/App.scss";
-import Shop from "./pages/shop.js";
 import Aboutme from "./pages/aboutme.js";
 import Projets from "./pages/projets.js";
 import Header from "./components/Header.js"
@@ -16,7 +15,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
         <Route path="/aboutme" element={<Aboutme />} />
         <Route path="/services" element={<Projets />} />
         <Route path="*" element={<Home />} />

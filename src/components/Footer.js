@@ -23,12 +23,6 @@ const Footer = () => {
             </li>
           </NavLink>
 
-          <NavLink to="/shop" className="shop">
-            <li className="mod">
-              Redbubble Shop
-            </li>
-          </NavLink>
-
           <a href="https://github.com/DennAmo" target="_blank" rel="noreferrer">
             <li className="mod">
               GitHub CodeSpace
@@ -41,7 +35,7 @@ const Footer = () => {
             </li>
           </a>
         </ul>
-        <h5>Aubry Dennis © 2024</h5>
+        <h5>Aubry Dennis © 2025</h5>
       </nav>
     </footer>
   );
