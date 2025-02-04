@@ -1,211 +1,123 @@
 import React, { useEffect, useState } from 'react';
 
-const technologiesTop = [
-  {
-    title: 'SEO',
-    img: './assets/seo.png',
-  },
-  {
-    title: 'Debug',
-    img: './assets/opti.png',
-  },
-  {
-    title: 'Boost',
-    img: './assets/boost.png',
-  }
-];
-
-const technologiesBot = [
-  {
-    title: 'MySQL',
-    img: './assets/sql.svg',
-  },
-  {
-    title: 'MongoDB',
-    img: './assets/mongo.svg',
-  },
-  {
-    title: 'NodeJS',
-    img: './assets/node.svg',
-  }
-];
-
-const technologiesLeft = [
-  {
-    title: 'Html5',
-    img: './assets/html.svg',
-  },
-  {
-    title: 'React',
-    img: './assets/react.svg',
-  },
-  {
-    title: 'JS',
-    img: './assets/js.svg',
-  }
-];
-
-const technologiesRight = [
-  {
-    title: 'Css',
-    img: './assets/css.svg',
-  },
-  {
-    title: 'Sass',
-    img: './assets/sass.svg',
-  },
-  {
-    title: 'Redux',
-    img: './assets/redux.svg',
-  }
-];
+const technologies = {
+  top: [
+    { title: 'SEO', img: './assets/seo.png', category: 'optimization' },
+    { title: 'Debug', img: './assets/opti.png', category: 'development' },
+    { title: 'Boost', img: './assets/boost.png', category: 'optimization' }
+  ],
+  right: [
+    { title: 'CSS', img: './assets/css.svg', category: 'frontend' },
+    { title: 'Sass', img: './assets/sass.svg', category: 'frontend' },
+    { title: 'Redux', img: './assets/redux.svg', category: 'frontend' }
+  ],
+  bottom: [
+    { title: 'MySQL', img: './assets/sql.svg', category: 'backend' },
+    { title: 'MongoDB', img: './assets/mongo.svg', category: 'backend' },
+    { title: 'NodeJS', img: './assets/node.svg', category: 'backend' }
+  ],
+  left: [
+    { title: 'HTML5', img: './assets/html.svg', category: 'frontend' },
+    { title: 'React', img: './assets/react.svg', category: 'frontend' },
+    { title: 'JavaScript', img: './assets/js.svg', category: 'frontend' }
+  ]
+};
 
 const Home = () => {
+  const [activeSection, setActiveSection] = useState(null);
   const [segments, setSegments] = useState(Array(15).fill(false));
-  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    if (!isHovered) return;
+    if (!activeSection) return;
 
     let intervalId;
-    let totalDuration = 3000;
-    let currentTime = 0;
-
-    const startClignotement = () => {
+    const animateSegments = () => {
+      let progress = 0;
       intervalId = setInterval(() => {
-        currentTime += 230;
-
-        const newSegments = segments.map((segment) => {
-          if (segment) return true;
-          return Math.random() < currentTime / totalDuration;
-        });
-
-        setSegments(newSegments);
-
-        if (currentTime >= totalDuration || newSegments.every((segment) => segment)) {
+        progress += 0.1;
+        setSegments(prev => prev.map(() => Math.random() < progress));
+        
+        if (progress >= 1) {
           clearInterval(intervalId);
           setSegments(Array(15).fill(true));
         }
-      }, 100);
+      }, 50);
     };
 
-    startClignotement();
-
+    animateSegments();
     return () => clearInterval(intervalId);
-  }, [isHovered, segments]);
+  }, [activeSection]);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    setSegments(Array(15).fill(false));
-  };
+  const TechButton = ({ tech, position }) => (
+    <div 
+      className={`tech-button-wrapper ${position} ${activeSection === tech.title ? 'active' : ''}`}
+      onMouseEnter={() => {
+        setActiveSection(tech.title);
+        setSegments(Array(15).fill(false));
+      }}
+      onMouseLeave={() => setActiveSection(null)}
+    >
+      <button className="tech-button">
+        <span className="tech-title">{tech.title}</span>
+        <div className="connection-line">
+          {segments.map((active, i) => (
+            <div 
+              key={i} 
+              className={`segment ${active ? 'active' : ''}`}
+            />
+          ))}
+        </div>
+        <img 
+          src={tech.img} 
+          alt={`${tech.title} icon`} 
+          className="tech-icon"
+        />
+      </button>
+    </div>
+  );
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  return (
+    <div className="home-container">
+      <h1 className="title">Portfolio</h1>
+      
+      <div className="tech-orbit">
+        <div className="tech-section top">
+          {technologies.top.map((tech, i) => (
+            <TechButton key={i} tech={tech} position="top" />
+          ))}
+        </div>
 
-  return (<>
-    <h2 className='title'>Accueil</h2>
-    <div className="btncontainer">
+        <div className="middle-row">
+          <div className="tech-section left">
+            {technologies.left.map((tech, i) => (
+              <TechButton key={i} tech={tech} position="left" />
+            ))}
+          </div>
 
-      <div> <div className='columnleft'>
-        {technologiesLeft.map((tech, index) => (
-          <div className="button-container" key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <button className="tech-button">
-              <span className="button-text">{tech.title}</span>
-            </button>
-            <div className="button-extension">
-              <div className="button-line">
-                {segments.map((active, segmentIndex) => (
-                  <div key={segmentIndex} className={`line-segment ${active ? 'active' : ''}`}></div>
-                ))}
-              </div>
-              <img
-                src={tech.img}
-                alt={`${tech.title} Icon`}
-                className="button-icon"
+          <div className="profile-container">
+            <div className="profile-frame">
+              <img 
+                src="/assets/myself.jpeg" 
+                alt="Profile" 
+                className="profile-image"
               />
             </div>
           </div>
-        ))}
-      </div>
-      </div>
-      <div>
 
-        <div className='columntop'>
-          {technologiesTop.map((tech, index) => (
-            <div className="button-container" key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <button className="tech-button3">
-                <span className="button-text3">{tech.title}</span>
-              </button>
-              <div className="button-extension3">
-                <div className="button-line3">
-                  {segments.map((active, segmentIndex) => (
-                    <div key={segmentIndex} className={`line-segment ${active ? 'active' : ''}`}></div>
-                  ))}
-                </div>
-                <img
-                  src={tech.img}
-                  alt={`${tech.title} Icon`}
-                  className="button-icon"
-                />
-              </div>
-            </div>
-          ))}
+          <div className="tech-section right">
+            {technologies.right.map((tech, i) => (
+              <TechButton key={i} tech={tech} position="right" />
+            ))}
+          </div>
         </div>
 
-        <div className='myself'>
-          <img className='myseflimg' src="/assets/myself.jpeg" alt="Myself" />
-        </div>
-
-
-        <div className='columnbot'>
-          {technologiesBot.map((tech, index) => (
-            <div className="button-container" key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <button className="tech-button4">
-                <span className="button-text4">{tech.title}</span>
-              </button>
-              <div className="button-extension4">
-                <div className="button-line4">
-                  {segments.map((active, segmentIndex) => (
-                    <div key={segmentIndex} className={`line-segment ${active ? 'active' : ''}`}></div>
-                  ))}
-                </div>
-                <img
-                  src={tech.img}
-                  alt={`${tech.title} Icon`}
-                  className="button-icon"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <div className='columnright'>
-          {technologiesRight.map((tech, index) => (
-            <div className="button-container" key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <button className="tech-button2">
-                <span className="button-text2">{tech.title}</span>
-              </button>
-              <div className="button-extension2">
-                <div className="button-line2">
-                  {segments.map((active, segmentIndex) => (
-                    <div key={segmentIndex} className={`line-segment ${active ? 'active' : ''}`}></div>
-                  ))}
-                </div>
-                <img
-                  src={tech.img}
-                  alt={`${tech.title} Icon`}
-                  className="button-icon"
-                />
-              </div>
-            </div>
+        <div className="tech-section bottom">
+          {technologies.bottom.map((tech, i) => (
+            <TechButton key={i} tech={tech} position="bottom" />
           ))}
         </div>
       </div>
     </div>
-  </>
   );
 };
 
