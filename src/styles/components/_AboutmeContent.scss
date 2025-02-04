@@ -1,85 +1,149 @@
-.aboutme {
-  margin: 60px;
-
-  .aboutme * {
-    padding: 0;
-    margin: 0;
-  }
-
-  p {
-    white-space: pre-wrap;
-    font-family: Arial, sans-serif;
-    margin: 10px;
-  }
-
-  h2 a {
-    margin: 10px;
-  }
-
-  .testimg {
-    width: 80%;
-  }
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.container {
+.section-title {
+  font-size: 2.5rem;
+  color: #2d3436;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #0984e3;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Contact Section */
+.contact-grid {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.center {
+.contact-card {
+  display: flex;
   width: 30%;
-}
-
-
-.btn {
-  height: 60px;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
   cursor: pointer;
-  background: transparent;
-  border: 1px solid #91C9FF;
-  transition: 1s ease-in-out;
+  text-decoration: none;
+  color: #2d3436;
+  background-color: rgb(82, 81, 81);
 }
 
-.aboutme .column {
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0984e3;
+}
+
+/* Cards */
+.card {
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid {
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-.btn:hover {
-  transition: 1s ease-in-out;
-  background: rgb(19, 110, 91);
+.skill-tag {
+  background: #0984e3;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
 }
 
-.btn span {
-  color: white;
-  font-size: 18px;
-  font-weight: 100;
+/* Interests Section */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
+.interest-card {
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.interest-card i {
+  font-size: 2rem;
+  color: #0984e3;
+  margin-bottom: 1rem;
+}
+
+.interest-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.interest-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
-  background-color: rgb(56, 44, 44);
-  padding: 20px;
-  border-radius: 8px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
   position: relative;
-  text-align: center;
+  max-width: 500px;
+  width: 90%;
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: #2d3436;
+}
+
+.phone-number {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #0984e3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
 }
