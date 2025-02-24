@@ -49,7 +49,7 @@ const AboutmeContent = () => {
                 <i className="fas fa-times"></i>
               </button>
               <h3>Numéro de téléphone</h3>
-              <p className="phone-number">+33 6 21 68 98 33</p>
+              <p className="phone-number">xxxxxxx</p>
             </div>
           </div>
         )}
